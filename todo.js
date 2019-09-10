@@ -4,11 +4,11 @@ let app = new Vue({
     el: '#todo',
     data: {
         list : " ",
-        isActive: false,
+       isActive: false,
         todos: [
-            { text: 'Apprendre JavaScript' },
+            { text: 'Apprendre JavaScript'  },
             { text: 'Apprendre Vue' },
-            { text: 'Créer quelque chose de génial' }
+            { text: 'Créer quelque chose de génial'}
           ]
     },
     methods: {
@@ -28,6 +28,11 @@ let app = new Vue({
                 this.isActive = true;
             }
             console.log(this.isActive);
+        },
+        barreList: function()
+        {
+            console.log(app.todos(0));
+           // app.todos.$remove(0);
         }
     }
 

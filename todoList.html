@@ -54,10 +54,10 @@
             
             <div class="d-flex flex-column align-items-center m-auto ">
                 <h4 class="text-light mb-3">Your list</h4>
-               <ul class="text-left">
-                    <li class="d-flex justify-content-start mb-3 list" v-for="todo in todos">
+               <ul class="text-left" id="v-for-todos">
+                    <li class="d-flex justify-content-start mb-3 list" v-for="todo,index in todos">
                            <div class="btn btn-primary d-flex align-items-center"><input type="checkbox" @click="validList"></div>
-                               <p class="d-flex align-items-center" v-bind:class="{ active: isActive }" >{{ todo.text }}</p><button class="btn btn-primary" >X</button>
+                               <p class="d-flex align-items-center" v-bind:class="{ active: isActive }" >{{ todo.text }} </p><button class="btn btn-primary" @click="barreList">{{ index}}</button>
                           </li>
                </ul>
             </div>
