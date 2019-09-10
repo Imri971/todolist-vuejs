@@ -6,9 +6,9 @@ let app = new Vue({
         list : " ",
        isActive: false,
         todos: [
-            { text: 'Apprendre JavaScript'  },
-            { text: 'Apprendre Vue' },
-            { text: 'Créer quelque chose de génial'}
+            { text: 'Apprendre JavaScript', done: false  },
+            { text: 'Apprendre Vue', done: false},
+            { text: 'Créer quelque chose de génial', done: false}
           ]
     },
     methods: {
@@ -17,22 +17,10 @@ let app = new Vue({
             app.todos.push({ text: app.list })
             app.list = " "
              },
-
-        validList: function()
-        {
-            console.log(this.isActive);
-            if (this.isActive) {
-                this.isActive = !this.isActive;
-            }else
-            {
-                this.isActive = true;
-            }
-            console.log(this.isActive);
-        },
-        barreList: function()
+        barreList: function(index)
         {
            
-            app.todos.splice(1, 1, {text: 'yo'});
+            app.todos.splice(index,1);
           
         }
     }

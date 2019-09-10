@@ -40,6 +40,7 @@
         }
         .active{
             text-decoration : line-through;
+            color: rgba(201, 153, 21, 0.5);
         }
     </style>
 </head>
@@ -55,9 +56,9 @@
             <div class="d-flex flex-column align-items-center m-auto ">
                 <h4 class="text-light mb-3">Your list</h4>
                <ul class="text-left" id="v-for-todos">
-                    <li class="d-flex justify-content-start mb-3 list" v-for="todo,index in todos">
-                           <div class="btn btn-primary d-flex align-items-center"><input type="checkbox" @click="validList"></div>
-                               <p class="d-flex align-items-center" v-bind:class="{ active: isActive }" >{{ todo.text }} </p><button class="btn btn-primary" @click="barreList">{{ index}}</button>
+                    <li class="d-flex justify-content-start mb-3 list"  v-for="todo,index in todos">
+                           <div class="btn btn-primary d-flex align-items-center"><input type="checkbox" v-model="todo.done"></div>
+                               <p class="d-flex align-items-center" :class="{'active':todo.done}" >{{ todo.text }} </p><button class="btn btn-primary" @click="barreList(index)">X</button>
                           </li>
                </ul>
             </div>
