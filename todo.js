@@ -31,8 +31,9 @@ let app = new Vue({
         },
         barreList: function()
         {
-            console.log(app.todos(0));
-           // app.todos.$remove(0);
+           
+            app.todos.splice(1, 1, {text: 'yo'});
+          
         }
     }
 

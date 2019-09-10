@@ -27,9 +27,15 @@
         Vue.component('alert', {
 
             template: `<div :class="alerttype" role="alert">
-                    Ceci est un message {{message}}
+                  {{help}}  Ceci est un message {{message}} 
                   </div>`,
-            props:   ['message', 'alerttype']    
+            props:   ['message', 'alerttype'],
+            data: function()
+            {
+                return {
+                    help: "Tu veux de l'aide?"
+                }
+            }    
         })
         let app = new Vue({
             el: "#app"
