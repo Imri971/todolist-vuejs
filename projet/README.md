@@ -1,4 +1,4 @@
-# kanban
+# projet
 
 ## Project setup
 ```

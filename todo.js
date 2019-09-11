@@ -6,9 +6,7 @@ let app = new Vue({
         list : " ",
        isActive: false,
         todos: [
-            { text: 'Apprendre JavaScript', done: false  },
-            { text: 'Apprendre Vue', done: false},
-            { text: 'Créer quelque chose de génial', done: false}
+            { text: 'Apprendre JavaScript', done: false  }
           ]
     },
     methods: {
