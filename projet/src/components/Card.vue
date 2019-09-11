@@ -1,11 +1,11 @@
 <template>
   <div class="hello">
  
-    <div class="card">
+    <div class="card col-12 p-3">
         <h1>sport</h1>
         <h2>{{title}}</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, quisquam, mollitia necessitatibus fugiat nobis, deleniti ad odit dolorum asperiores quidem iure maiores eum natus tempore.</p>
-        <button @click="send">More</button>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button @click="send" class="btn btn-primary">More</button>
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   name: 'Card',
   props:['title'],
   methods:{
-    send: function(){
+    send: function(){2
       this.$emit("action", this.title)
     }
   }

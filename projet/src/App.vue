@@ -9,15 +9,22 @@
   </div>
 </template>
 
-
-
+<script>
+import Home from './views/Home.vue'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootswatch/dist/solar/bootstrap.min.css";
+export default {
+  
+}
+</script>
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #c9d7e6;
 }
 #nav {
   padding: 30px;
